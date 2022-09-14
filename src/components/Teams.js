@@ -1,7 +1,9 @@
+import { motion } from "framer-motion";
 import React from "react";
 import Team from "./Team";
 
 export default function Teams() {
+  // fake data
   const teams = [
     {
       id: 1,
@@ -31,7 +33,17 @@ export default function Teams() {
   return (
     <>
       <div className="pt-12">
-        <h2 className="text-center font-bold text-4xl">Meet Them Team</h2>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
+          <h2 className="text-center font-bold text-4xl">Meet Them Team</h2>
+        </motion.div>
         <div className="flex flex-wrap py-12 justify-center">
           {teams?.map((team) => (
             <Team key={team?.id} team={team} />
