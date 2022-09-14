@@ -1,10 +1,12 @@
-
+import Teams from "./components/Teams";
 
 function App() {
   return (
-    <div >
-      <h2>hello</h2>
-    </div>
+    <>
+      <div className="max-w-xl mx-auto">
+        <Teams />
+      </div>
+    </>
   );
 }
 
