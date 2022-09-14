@@ -17,11 +17,15 @@ export default function Team({ team }) {
       >
         <div
           className={`space-y-3 ${
-            id % 2 === 0 && "sm:pt-16 sm:ml-[-50px]"
+            id % 2 === 0 && "sm:pt-24 sm:ml-[-50px]"
           } pb-6`}
         >
           <div>
-            <img className="w-[300px] h-[280px]" src={img} alt={name} />
+            <img
+              className="w-[250px] h-[220px] md:w-[300px] md:h-[280px]"
+              src={img}
+              alt={name}
+            />
           </div>
           <div>
             <h4 className="text-lg font-medium">{name}</h4>

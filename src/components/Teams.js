@@ -32,7 +32,7 @@ export default function Teams() {
   ];
   return (
     <>
-      <div className="pt-12">
+      <div className="pt-8 md:pt-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -42,9 +42,11 @@ export default function Teams() {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
-          <h2 className="text-center font-bold text-4xl">Meet Them Team</h2>
+          <h2 className="text-center font-bold text-xl sm:text-2xl md:text-3xl">
+            Meet Them Team
+          </h2>
         </motion.div>
-        <div className="flex flex-wrap py-12 justify-center">
+        <div className="grid sm:flex flex-wrap py-8 md:py-12 justify-center">
           {teams?.map((team) => (
             <Team key={team?.id} team={team} />
           ))}
